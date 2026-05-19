@@ -4,6 +4,15 @@
   <default>
     <joint armature="10" damping="50" range="-3.14 3.14" />
     <material specular="0.5" shininess="0.25" />
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+    <default class="in-model-collision">
+      <geom group="3" contype="1" conaffinity="1"/>
+    </default>
   </default>
 
   <visual>
@@ -69,7 +78,7 @@
       <body name="wheel_l" pos="0.228 0.265 0.1">
         <inertial pos="0 0.00073938 0" quat="0.707107 0 0 0.707107" mass="1.37784" diaginertia="0.00811815 0.00426657 0.00426657" />
         <joint name="left_wheel" pos="0 0 0" axis="0 -1 0" limited="false" />
-        <include file="./assets/WHEEL/geoms.xml" />
+        <include file="./assets/WHEEL/geoms_l.xml" />
       </body>
       <body name="link_torso_0" pos="0 0 0.2805">
         <inertial pos="-0.0884841 0.00021367 4.6e-07" quat="0.443798 0.550483 -0.443815 0.55049" mass="2.24282" diaginertia="0.0189253 0.0143368 0.00985172" />
@@ -154,7 +163,7 @@
                                 <body name="ee_finger_r2" pos="-0.003 0 -0.2278" quat="4.48966e-11 0 0 1">
                                   <inertial pos="0.00278346 -3.29e-06 -0.0257011" quat="0.999784 0 0.0208044 0" mass="0.03327" diaginertia="1.23275e-05 1.066e-05 2.22251e-06" />
                                   <joint name="gripper_finger_r2" pos="0 0 0" axis="1 0 0" type="slide" limited="true" range="0 0.05" />
-                                  <include file="./assets/EE_FINGER/geoms.xml" />
+                                  <include file="./assets/EE_FINGER/geoms_2.xml" />
                                 </body>
                               </body>
                             </body>
@@ -203,17 +212,17 @@
                                 </body>
                                 <body name="EE_BODY_L" pos="0 0 -0.1548">
                                   <inertial pos="0 0 0" mass="0" />
-                                  <include file="./assets/EE_BODY/geoms.xml" />
+                                  <include file="./assets/EE_BODY/geoms_2.xml" />
                                 </body>
                                 <body name="ee_finger_l1" pos="-0.003 0 -0.2278" quat="4.48966e-11 0 0 1">
                                   <inertial pos="0.00278346 -3.29e-06 -0.0257011" quat="0.999784 0 0.0208044 0" mass="0.03327" diaginertia="1.23275e-05 1.066e-05 2.22251e-06" />
                                   <joint name="gripper_finger_l1" pos="0 0 0" axis="-1 0 0" type="slide" limited="true" range="-0.05 0" />
-                                  <include file="./assets/EE_FINGER/geoms.xml" />
+                                  <include file="./assets/EE_FINGER/geoms_3.xml" />
                                 </body>
                                 <body name="ee_finger_l2" pos="0.003 0 -0.2278" quat="-1 0 0 8.97932e-11">
                                   <inertial pos="0.00278346 -3.29e-06 -0.0257011" quat="0.999784 0 0.0208044 0" mass="0.03327" diaginertia="1.23275e-05 1.066e-05 2.22251e-06" />
                                   <joint name="gripper_finger_l2" pos="0 0 0" axis="1 0 0" type="slide" limited="true" range="0 0.05" />
-                                  <include file="./assets/EE_FINGER/geoms.xml" />
+                                  <include file="./assets/EE_FINGER/geoms_4.xml" />
                                 </body>
                               </body>
                             </body>
